@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style type="text/css">
+      body{
+  background-color:black;
+}
+h1{
+  color:grey;
+  display:inline-block;
+  margin-bottom:0px;
+  margin-left: 20px;
+  font-family: 'Encode Sans SC', sans-serif;
+  font-weight: normal
+
+}
+p{
+  color:grey;
+  display:inline-block;
+  font-family: 'Encode Sans SC', sans-serif;
+  font-weight: normal
+}
+h4{
+  color:grey;
+  margin-top: 0px;
+  margin-left: 20px;
+}
+table{
+  width:98%;
+  border-collapse: separate;
+  border-spacing: 0 15px;
+  margin-left: 20px;
+  margin-right: 20px;
+
+
+}
+th{
+  color:grey;
+
+}
+td{
+  color:white;
+  text-align:center;
+  height:30px;
+ font-weight:600;
+
+}
+tr{
+  padding:10px;
+
+}
+
+.data{
+  background-color:#393E46;
+
+}
+    </style>
+  </head>
+  <body>
+    <h1>HOLDLINFO</h1><p>.com</p>
+<h4><span style="color:#835151">Powered by </span>Finstreet</h4>
+
+<table>
+  <tr>
+
+    <th>name</th>
+    <th>last</th>
+    <th>Buy / Sell price</th>
+    <th>volume</th>
+    <th>base_unit</th>
+  </tr>
+  <% allCurrencies.forEach(function(currency){%>
+
+
+  <tr class="data">
+
+    <td><%= currency.name %></td>
+    <td>₹<%= currency.lastPrice %></td>
+    <td>₹<%= currency.buyPrice %>/ ₹<%= currency.sellPrice %></td>
+    <td><%= currency.volume%></td>
+    <td><%= currency.base %></td>
+  </tr>
+  <% }) %>
+</table>
+  </body>
+</html>
